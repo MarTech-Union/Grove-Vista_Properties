@@ -37,10 +37,10 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 2xl:max-w-screen-2xl">
 
         {/* Main grid */}
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-8">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
 
           {/* Brand column */}
-          <div className="md:col-span-5">
+          <div className="lg:col-span-5">
             <h2 className="font-serif text-xl font-semibold text-white">Grove Vista Properties</h2>
             <p className="mt-3 max-w-sm text-[13px] leading-relaxed text-slate-400">
               Premium real estate advisory for buyers, investors, and renters
@@ -49,10 +49,10 @@ export default function Footer() {
           </div>
 
           {/* Spacer */}
-          <div className="hidden md:col-span-1 md:block" />
+          <div className="hidden lg:col-span-1 lg:block" />
 
           {/* Links + Contact — 3 equal columns */}
-          <div className="grid grid-cols-2 gap-8 md:col-span-6 lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-6">
 
             {Object.entries(footerLinks).map(([category, items]) => (
               <div key={category}>

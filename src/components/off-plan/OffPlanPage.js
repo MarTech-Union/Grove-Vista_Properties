@@ -146,10 +146,7 @@ export default function OffPlanPage() {
                   <p className="font-serif text-xl font-semibold text-white">Upcoming Projects Across India</p>
                 </div>
               </div>
-              <div className="absolute -bottom-5 -right-2 sm:-right-5 rounded-2xl border border-white/10 bg-slate-800 px-6 py-4 shadow-2xl">
-                <p className="font-serif text-3xl font-bold text-white">200+</p>
-                <p className="text-[11px] font-medium text-slate-400">Active Projects</p>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -172,7 +169,7 @@ export default function OffPlanPage() {
               />
             </div>
             <select
-              className="shrink-0 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-lg font-medium text-slate-700 focus:border-amber-400 focus:outline-none"
+              className="shrink-0 rounded-xl border border-slate-200 bg-slate-50 px-3 py-2.5 text-sm font-medium text-slate-700 focus:border-amber-400 focus:outline-none"
               value={priceRange}
               onChange={(e) => setPriceRange(e.target.value)}
             >

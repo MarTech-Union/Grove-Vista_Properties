@@ -393,9 +393,9 @@ export default function CareersSection() {
           </div>
 
           {/* Asymmetric bento grid: tall left + 4 tiles right */}
-          <div className="grid h-[800px] sm:h-[600px] md:h-[540px] grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-rows-4 sm:grid-rows-3 md:grid-rows-2 gap-3 overflow-hidden rounded-2xl">
+          <div className="grid h-[800px] sm:h-[800px] lg:h-[540px] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 grid-rows-4 sm:grid-rows-[1.5fr_1fr_1.5fr] lg:grid-rows-2 gap-3 overflow-hidden rounded-2xl">
             {/* Tall left */}
-            <div className="group relative col-span-1 sm:col-span-2 md:col-span-1 row-span-1 md:row-span-2 cursor-pointer overflow-hidden rounded-xl shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div className="group relative col-start-1 col-span-1 row-start-1 row-span-1 sm:col-start-1 sm:col-span-2 sm:row-start-1 sm:row-span-1 lg:col-start-1 lg:col-span-1 lg:row-start-1 lg:row-span-2 cursor-pointer overflow-hidden rounded-xl shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
               <Image
                 src="https://ik.imagekit.io/kc8kqzi2u/Grove%20Vista%20Properties/Career/career-real-estate-agents.webp"
                 alt="Grove Vista team collaboration"
@@ -411,7 +411,7 @@ export default function CareersSection() {
             </div>
 
             {/* Top-right 1 */}
-            <div className="group relative cursor-pointer overflow-hidden rounded-xl shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div className="group relative col-start-1 col-span-1 row-start-2 row-span-1 sm:col-start-1 sm:col-span-1 sm:row-start-2 sm:row-span-1 lg:col-start-2 lg:col-span-1 lg:row-start-1 lg:row-span-1 cursor-pointer overflow-hidden rounded-xl shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
               <Image
                 src="https://ik.imagekit.io/kc8kqzi2u/Grove%20Vista%20Properties/Career/career-workspace-inspiring-offices.webp"
                 alt="Modern office workspace"
@@ -427,7 +427,7 @@ export default function CareersSection() {
             </div>
 
             {/* Top-right 2 */}
-            <div className="group relative cursor-pointer overflow-hidden rounded-xl shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div className="group relative col-start-1 col-span-1 row-start-3 row-span-1 sm:col-start-2 sm:col-span-1 sm:row-start-2 sm:row-span-1 lg:col-start-3 lg:col-span-1 lg:row-start-1 lg:row-span-1 cursor-pointer overflow-hidden rounded-xl shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
               <Image
                 src="https://ik.imagekit.io/kc8kqzi2u/Grove%20Vista%20Properties/Career/career-team-culture.webp?updatedAt=1783438617547"
                 alt="Team meeting"
@@ -443,7 +443,7 @@ export default function CareersSection() {
             </div>
 
             {/* Bottom-right wide */}
-            <div className="group relative sm:col-span-2 md:col-span-2 cursor-pointer overflow-hidden rounded-xl shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div className="group relative col-start-1 col-span-1 row-start-4 row-span-1 sm:col-start-1 sm:col-span-2 sm:row-start-3 sm:row-span-1 lg:col-start-2 lg:col-span-2 lg:row-start-2 lg:row-span-1 cursor-pointer overflow-hidden rounded-xl shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
               <Image
                 src="https://ik.imagekit.io/kc8kqzi2u/Grove%20Vista%20Properties/Career/career-card-property.webp"
                 alt="Premium properties across India"

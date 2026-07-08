@@ -204,7 +204,7 @@ export default function ContactSection() {
     >
       <div className="absolute left-0 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-300/20 blur-[100px]" />
 
-      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-16 px-6 sm:px-10 lg:px-16 2xl:max-w-screen-2xl 2xl:gap-20 md:grid-cols-2">
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-16 px-4 sm:px-6 lg:px-8 2xl:max-w-screen-2xl 2xl:gap-20 lg:grid-cols-2">
         <div>
           <p className="mb-4 text-sm font-bold uppercase tracking-widest text-amber-400">
             Get in Touch

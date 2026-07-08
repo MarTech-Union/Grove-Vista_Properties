@@ -111,7 +111,7 @@ export default function PiramalPage() {
         <div className="pointer-events-none absolute -left-40 -top-40 h-[500px] w-[500px] rounded-full bg-amber-400/8 blur-[120px]" />
         <div className="pointer-events-none absolute -bottom-20 right-0 h-96 w-96 rounded-full bg-violet-500/8 blur-[100px]" />
 
- <div className="relative mx-auto max-w-7xl px-12 md:px-16 2xl:max-w-screen-2xl">
+ <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-screen-2xl">
 
           {/* Breadcrumb */}
           <nav className="mb-10 flex items-center gap-2 text-[12.5px] font-medium text-white/50">
@@ -176,7 +176,7 @@ export default function PiramalPage() {
 
       {/* ── Projects ── */}
       <section className="bg-slate-50 py-20 2xl:py-28">
- <div className="mx-auto max-w-7xl px-12 md:px-16 2xl:max-w-screen-2xl">
+ <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-screen-2xl">
           <div className="mb-12">
             <p className="font-accent mb-3 text-xs font-bold uppercase tracking-[0.2em] text-amber-700">
               Projects in Mumbai
@@ -235,7 +235,7 @@ export default function PiramalPage() {
 
       {/* ── Our Values ── */}
       <section className="bg-white py-20 2xl:py-28">
- <div className="mx-auto max-w-7xl px-12 md:px-16 2xl:max-w-screen-2xl">
+ <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-screen-2xl">
           <div className="mb-12 text-center">
             <p className="font-accent mb-3 text-xs font-bold uppercase tracking-[0.2em] text-amber-700">Our Values</p>
             <h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.6rem)] font-semibold leading-tight text-slate-900">
@@ -266,7 +266,7 @@ export default function PiramalPage() {
       {/* ── CTA Banner ── */}
       <section className="relative overflow-hidden bg-slate-900 py-20">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_top_right,rgba(251,191,36,0.08),transparent),radial-gradient(ellipse_50%_40%_at_bottom_left,rgba(139,92,246,0.07),transparent)]" />
- <div className="relative mx-auto max-w-4xl px-12 md:px-16 text-center 2xl:max-w-5xl">
+ <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center 2xl:max-w-5xl">
           <p className="font-accent mb-3 text-xs font-bold uppercase tracking-[0.2em] text-amber-400">
             Exclusive Access
           </p>
@@ -301,7 +301,7 @@ export default function PiramalPage() {
 
       {/* ── Leadership ── */}
       <section className="bg-white py-20 2xl:py-28">
- <div className="mx-auto max-w-7xl px-12 md:px-16 2xl:max-w-screen-2xl">
+ <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-screen-2xl">
           <div className="mb-12 text-center">
             <p className="font-accent mb-3 text-xs font-bold uppercase tracking-[0.2em] text-amber-700">Who We Are</p>
             <h2 className="font-serif text-[clamp(1.8rem,3.5vw,2.6rem)] font-semibold leading-tight text-slate-900">
@@ -341,7 +341,7 @@ export default function PiramalPage() {
 
       {/* ── FAQ ── */}
       {faqs.length > 0 && (
- <section className="bg-white px-12 md:px-16 py-16 sm:py-20">
+ <section className="bg-white px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="mx-auto max-w-4xl w-full">
             <p className="font-accent text-[11px] font-bold uppercase tracking-[0.25em] text-amber-700 mb-3">FAQs</p>
             <h2 className="font-serif text-3xl font-bold text-slate-900 md:text-4xl mb-10">

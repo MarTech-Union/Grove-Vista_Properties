@@ -315,7 +315,7 @@ export default function Header() {
         <div className="hidden shrink-0 items-center gap-2 xl:gap-3 lg:flex">
           <a
             href="tel:+919082799951"
-            className="flex whitespace-nowrap items-center gap-2 text-[12px] xl:text-[13px] font-bold text-slate-700 transition-colors hover:text-amber-400"
+            className="hidden xl:flex whitespace-nowrap items-center gap-2 text-[12px] xl:text-[13px] font-bold text-slate-700 transition-colors hover:text-amber-400"
           >
             <span className="flex h-7 w-7 xl:h-8 xl:w-8 items-center justify-center rounded-full bg-blue-50">
               <svg
@@ -336,11 +336,11 @@ export default function Header() {
             +91 9082799951
           </a>
 
-          <div className="h-6 w-px bg-slate-200" />
+          <div className="hidden xl:block h-6 w-px bg-slate-200" />
 
           <a
             href="tel:+918928799951"
-            className="flex whitespace-nowrap items-center gap-2 text-[12px] xl:text-[13px] font-bold text-slate-700 transition-colors hover:text-amber-400"
+            className="hidden xl:flex whitespace-nowrap items-center gap-2 text-[12px] xl:text-[13px] font-bold text-slate-700 transition-colors hover:text-amber-400"
           >
             <span className="flex h-7 w-7 xl:h-8 xl:w-8 items-center justify-center rounded-full bg-blue-50">
               <svg
@@ -361,7 +361,7 @@ export default function Header() {
             +91 8928799951
           </a>
 
-          <div className="h-6 w-px bg-slate-200" />
+          <div className="hidden xl:block h-6 w-px bg-slate-200" />
 
           <button
             className="whitespace-nowrap rounded-xl bg-slate-900 px-4 xl:px-5 py-2.5 text-[13px] xl:text-[14px] font-bold text-white shadow-md shadow-slate-500/20 transition-all duration-200 hover:bg-slate-700 hover:shadow-lg hover:shadow-slate-500/30"
@@ -408,7 +408,7 @@ export default function Header() {
 
       {/* ── Mobile Menu ── */}
       {isMobileMenuOpen && (
-        <div className="max-h-[80vh] overflow-y-auto border-t border-slate-100 bg-white/98 shadow-2xl backdrop-blur-2xl lg:hidden">
+        <div className="absolute top-full left-0 w-full sm:left-auto sm:right-6 sm:mt-2 sm:w-[350px] sm:rounded-2xl max-h-[80vh] overflow-y-auto border-t sm:border border-slate-100 bg-white/98 shadow-2xl backdrop-blur-2xl lg:hidden">
           <div className="space-y-1 px-4 py-4">
             {Object.entries(menuData).map(([menu, data]) => (
               <div key={menu}>

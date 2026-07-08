@@ -78,12 +78,12 @@ export default function AboutUsPage() {
         id="our-story"
         className="scroll-mt-28 flex min-h-[70vh] items-center bg-black text-white md:min-h-[90vh]"
       >
-        <div className="mx-auto grid w-full max-w-7xl gap-8 px-12 py-12 sm:px-16 md:py-16 lg:grid-cols-2 lg:items-center lg:gap-10 lg:py-20 2xl:max-w-screen-2xl 2xl:gap-20">
-          <div>
+        <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:grid-cols-2 lg:items-center lg:gap-10 lg:py-20 2xl:max-w-screen-2xl 2xl:gap-20">
+          <div className="text-center lg:text-left flex flex-col items-center lg:items-start">
             <h1 className="font-serif text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
               Message from the CEO
             </h1>
-            <p className="mt-5 border-l-2 border-blue-400 pl-3 text-sm leading-relaxed text-gray-300 sm:pl-4 sm:text-base md:mt-6 md:text-lg">
+            <p className="mt-5 text-sm leading-relaxed text-gray-300 sm:text-base md:mt-6 md:text-lg">
               Dear Valued Clients &amp; Partners, At Grove Vista Properties,
               excellence is our foundation. With over 22 years in India&apos;s
               property market, I co-founded Grove Vista with one vision - to
@@ -118,7 +118,7 @@ export default function AboutUsPage() {
 
       {/* -- About + Stats -- */}
       <section className="bg-[#f0f5fb] py-16 md:py-24 2xl:py-32">
-        <div className="mx-auto w-full max-w-7xl px-12 sm:px-16 2xl:max-w-screen-2xl">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-screen-2xl">
 
           {/* Top - eyebrow + heading + description */}
           <div className="mx-auto max-w-3xl text-center">
@@ -161,7 +161,7 @@ export default function AboutUsPage() {
 
       {/* -- Our Values -- */}
       <section className="bg-slate-50 py-20 md:py-28 2xl:py-32">
- <div className="mx-auto max-w-7xl px-12 md:px-16 2xl:max-w-screen-2xl">
+ <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-screen-2xl">
           <div className="mb-16 text-center">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-400">
               Our Foundation
@@ -175,10 +175,10 @@ export default function AboutUsPage() {
             {valuesData.map(({ tag, heading, description, bullets, image, imageAlt, reverse }) => (
               <div
                 key={tag}
-                className={`flex flex-col items-center gap-12 md:flex-row md:gap-16 ${reverse ? "md:flex-row-reverse" : ""}`}
+                className={`flex flex-col-reverse items-center gap-12 lg:flex-row lg:gap-16 ${reverse ? "lg:flex-row-reverse" : ""}`}
               >
                 {/* Text */}
-                <div className="w-full md:w-1/2">
+                <div className="w-full lg:w-1/2">
                   <span className="inline-block rounded-full border border-amber-200 bg-amber-50 px-4 py-1 text-xs font-bold uppercase tracking-widest text-amber-500">
                     {tag}
                   </span>
@@ -203,8 +203,8 @@ export default function AboutUsPage() {
                 </div>
 
                 {/* Image */}
-                <div className="w-full md:w-1/2">
-                  <div className="relative h-[300px] overflow-hidden rounded-2xl shadow-lg md:h-[440px]">
+                <div className="w-full lg:w-1/2">
+                  <div className="relative h-[400px] overflow-hidden rounded-2xl shadow-lg lg:h-[440px]">
                     <Image
                       src={image}
                       alt={imageAlt}
@@ -257,7 +257,7 @@ export default function AboutUsPage() {
 
       {/* -- Inside Grove Vista -- */}
       <section className="bg-white py-20 md:py-24 2xl:py-32">
- <div className="mx-auto w-full max-w-7xl px-12 md:px-16 2xl:max-w-screen-2xl">
+ <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-screen-2xl">
           <div className="mb-12 text-center">
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-amber-400">
               Inside Grove Vista

@@ -15,7 +15,7 @@ export default function ContactPage() {
       <ContactSection />
 
       {/* Map Section */}
-      <section className="bg-slate-50 py-16 px-12 md:px-16 2xl:py-24">
+      <section className="bg-slate-50 py-16 px-4 sm:px-6 lg:px-8 2xl:py-24">
         <div className="mx-auto max-w-7xl 2xl:max-w-screen-2xl">
           <div className="mb-8 text-center">
             <p className="mb-2 text-sm font-bold uppercase tracking-widest text-amber-400">
