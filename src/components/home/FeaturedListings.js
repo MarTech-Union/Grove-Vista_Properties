@@ -46,7 +46,7 @@ export default function FeaturedListings() {
 
   return (
     <section className="bg-white py-16 md:py-20 2xl:py-28">
-      <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 2xl:max-w-screen-2xl">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-screen-2xl">
 
         {/* ── Header + Filters ── */}
         <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">

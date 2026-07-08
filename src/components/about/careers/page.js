@@ -225,7 +225,7 @@ export default function CareersSection() {
   return (
     <div className="bg-white text-slate-900">
 
-    <section className="relative w-full h-[50 0px] md:h-[90vh]">
+    <section className="relative w-full h-[500px] sm:h-[600px] md:h-[90vh]">
       
       {/* Background Image */}
       <Image

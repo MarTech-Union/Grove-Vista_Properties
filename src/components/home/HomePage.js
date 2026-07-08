@@ -54,7 +54,7 @@ export default function HomePage({ latestBlogs = [] }) {
 
   return (
     <div>
-      <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden">
+      <section className="relative flex min-h-[90svh] items-center justify-center overflow-hidden">
         <video
           className="absolute inset-0 h-full w-full object-cover"
           autoPlay
@@ -68,7 +68,7 @@ export default function HomePage({ latestBlogs = [] }) {
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
 
- <div className="relative z-10 mx-auto max-w-4xl px-6 sm:px-10 lg:px-16 text-center 2xl:max-w-5xl"> 
+ <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center 2xl:max-w-5xl"> 
           <h1 className="font-serif mb-6 text-[clamp(2.4rem,6vw,4rem)] font-bold leading-tight tracking-tight text-white 2xl:text-[4.5rem]">
             Find Your Dream
             <span className="block text-blue-300 drop-shadow-lg">Property in India</span>
@@ -125,7 +125,7 @@ export default function HomePage({ latestBlogs = [] }) {
       </section>
 
       <section className="bg-white py-24 2xl:py-32">
-        <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 2xl:max-w-screen-2xl">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-screen-2xl">
           <div className="mb-14">
             <p className="font-accent mb-3 text-xs font-bold uppercase tracking-[0.2em] text-amber-400">What We Offer</p>
             <h2 className="font-serif mb-4 text-[clamp(1.9rem,3.5vw,2.8rem)] font-semibold leading-tight text-slate-900">
@@ -138,7 +138,7 @@ export default function HomePage({ latestBlogs = [] }) {
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 2xl:gap-8">
             <div className="group rounded-2xl border border-slate-100 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-blue-100 hover:shadow-lg">
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+              <div className="mb-5 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
                 <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
@@ -152,7 +152,7 @@ export default function HomePage({ latestBlogs = [] }) {
             </div>
 
             <div className="group rounded-2xl border border-slate-100 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-orange-100 hover:shadow-lg">
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-orange-50 text-orange-600">
+              <div className="mb-5 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-orange-600">
                 <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>
@@ -166,7 +166,7 @@ export default function HomePage({ latestBlogs = [] }) {
             </div>
 
             <div className="group rounded-2xl border border-slate-100 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-100 hover:shadow-lg">
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600">
+              <div className="mb-5 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600">
                 <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
@@ -180,7 +180,7 @@ export default function HomePage({ latestBlogs = [] }) {
             </div>
 
             <div className="group rounded-2xl border border-slate-100 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-violet-100 hover:shadow-lg">
-              <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-violet-50 text-violet-600">
+              <div className="mb-5 flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-violet-50 text-violet-600">
                 <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                 </svg>
@@ -201,8 +201,8 @@ export default function HomePage({ latestBlogs = [] }) {
 
       <FeaturedListings />
 
-      <section className="bg-slate-100 px-6 sm:px-10 lg:px-16 py-16 md:py-20 2xl:py-28">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2 2xl:max-w-screen-2xl 2xl:gap-20">
+      <section className="bg-slate-100 py-16 md:py-20 2xl:py-28">
+        <div className="mx-auto grid max-w-7xl px-4 sm:px-6 lg:px-8 items-center gap-12 md:grid-cols-2 2xl:max-w-screen-2xl 2xl:gap-20">
           <div>
             <p className="font-accent mb-4 text-xs font-bold uppercase tracking-[0.2em] text-amber-400">Career at Grove Vista</p>
             <h2 className="font-serif mb-6 text-[clamp(1.9rem,3.5vw,2.8rem)] font-semibold leading-tight text-slate-900">
@@ -224,7 +224,7 @@ export default function HomePage({ latestBlogs = [] }) {
             </button>
           </div>
 
-          <div className="relative h-[420px] overflow-hidden rounded-2xl shadow-lg">
+          <div className="relative h-[420px] w-full overflow-hidden rounded-2xl shadow-lg">
             <Image src={careerImage} alt="Career team" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
           </div>
         </div>
@@ -234,8 +234,8 @@ export default function HomePage({ latestBlogs = [] }) {
 
         <Newsletter blogs={latestBlogs} />
 
-       <section className="bg-slate-100 px-6 sm:px-10 lg:px-16 py-16 md:py-20 2xl:py-28">
-        <div className="mx-auto max-w-7xl 2xl:max-w-screen-2xl">
+       <section className="bg-slate-100 py-16 md:py-20 2xl:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-screen-2xl">
             <h2 className="font-serif mb-5 text-center text-[clamp(1.7rem,3vw,2.4rem)] font-semibold text-slate-900">
               Everything you Need at One Place
             </h2>
@@ -244,7 +244,7 @@ export default function HomePage({ latestBlogs = [] }) {
           {service.map((service, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center p-6 cursor-pointer rounded-3xl border border-white/60 bg-white/40 shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)]"
+              className="flex flex-col items-center justify-center p-6 cursor-pointer rounded-3xl border border-white/60 bg-white/40 shadow-sm backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] w-full min-h-[140px]"
             >
               <Image
                 src={service.icon}
@@ -267,7 +267,7 @@ export default function HomePage({ latestBlogs = [] }) {
       <section className="relative overflow-hidden bg-slate-900 py-24 2xl:py-32">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_top_right,rgba(59,130,246,0.12),transparent),radial-gradient(ellipse_60%_40%_at_bottom_left,rgba(16,185,129,0.08),transparent)]" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 2xl:max-w-screen-2xl">
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-screen-2xl">
           <div className="grid gap-16 lg:grid-cols-2 lg:items-center 2xl:gap-24">
 
             {/* Left — headline + stats */}
@@ -344,7 +344,7 @@ export default function HomePage({ latestBlogs = [] }) {
       </section>
       {/* ── Caught your attention ── */}
       <section className="w-full bg-white py-16 md:py-20 2xl:py-28 overflow-hidden">
-        <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 2xl:max-w-screen-2xl">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-screen-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-10 lg:gap-16">
 
             {/* Text */}

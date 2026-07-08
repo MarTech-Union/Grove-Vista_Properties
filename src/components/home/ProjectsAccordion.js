@@ -120,8 +120,8 @@ export default function ProjectsAccordion() {
   const [hoveredPill, setHoveredPill] = useState(null);
 
   return (
-    <section className="bg-white py-20 lg:px-8 2xl:py-28">
- <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 2xl:max-w-screen-2xl">
+    <section className="bg-white py-20 2xl:py-28">
+ <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 2xl:max-w-screen-2xl">
 
         {/* ── Heading ── */}
         <div className="mb-12 flex items-end justify-between gap-4">

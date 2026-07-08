@@ -44,7 +44,7 @@ export default function TestimonialsSection() {
 
   return (
     <section className="bg-gradient-to-br from-slate-50 via-white to-blue-50 py-16 md:py-20 2xl:py-28">
-      <div className="mx-auto max-w-6xl px-6 sm:px-10 lg:px-16 2xl:max-w-screen-2xl">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 2xl:max-w-screen-2xl">
         <h2 className="font-serif mb-4 text-center text-3xl font-semibold text-slate-900 md:text-4xl">
           What Our Clients Say
         </h2>

@@ -22,7 +22,7 @@ export default function Newsletter({ blogs = [] }) {
 
   return (
     <section className="bg-white py-20 md:py-24 2xl:py-32">
-      <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16 2xl:max-w-screen-2xl">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-screen-2xl">
 
         {/* ── Section header ── */}
         <div className="mb-12 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
