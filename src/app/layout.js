@@ -57,9 +57,10 @@ export default async function RootLayout({ children }) {
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} ${playfairDisplay.variable} ${manrope.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-white text-slate-900">
+      <body className="min-h-full bg-white text-slate-900" suppressHydrationWarning>
         <LayoutWrapper>{children}</LayoutWrapper>
         {GA_ID && (
           <>

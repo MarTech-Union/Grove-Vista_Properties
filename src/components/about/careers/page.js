@@ -234,6 +234,7 @@ export default function CareersSection() {
         fill
         className="object-cover"
         sizes="100vw"
+        priority
       />
 
       {/* Gradient Overlay */}
@@ -244,14 +245,13 @@ export default function CareersSection() {
 
       {/* Content */}
       <div className="absolute inset-0 flex items-end justify-center">
- <div className="max-w-screen-2xl w-full px-12 md:px-16 py-8 md:py-24 text-center text-white"> 
+ <div className="max-w-screen-2xl w-full px-4 sm:px-6 lg:px-8 py-8 md:py-24 text-center text-white"> 
           
           <h1 className="font-serif text-4xl md:text-[56px] font-semibold leading-none uppercase w-full lg:w-3/5 mx-auto">
             Take your career to new heights in luxury living.
           </h1>
 
-          <a href="#form">
-            <button className="mt-6 px-6 py-4 bg-white text-black text-sm font-bold uppercase flex items-center gap-3 mx-auto hover:bg-gray-200 transition">
+          <a href="#form" className="mt-6 px-6 py-4 bg-white text-black text-sm font-bold uppercase flex items-center justify-center gap-3 w-fit mx-auto hover:bg-gray-200 transition">
               WORK WITH US
               <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -267,8 +267,6 @@ export default function CareersSection() {
     d="M5 12h14M13 5l7 7-7 7"
   />
 </svg>
-               
-            </button>
           </a>
 
         </div>
@@ -276,7 +274,7 @@ export default function CareersSection() {
 
     </section>
 
- <section className="mx-auto w-full max-w-7xl px-12 md:px-16 py-12 md:py-16 2xl:max-w-screen-2xl 2xl:py-20"> 
+ <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-16 2xl:max-w-screen-2xl 2xl:py-20"> 
         <div className="mb-6">
           <h2 className="font-serif text-3xl font-semibold text-slate-900 md:text-4xl">Latest India team updates</h2>
         </div>
@@ -291,7 +289,7 @@ export default function CareersSection() {
 
       
       <section className="bg-black">
-        <div className="mx-auto grid w-full max-w-7xl gap-8 px-12 md:px-16 py-10 md:grid-cols-2 md:items-center md:py-14 2xl:max-w-screen-2xl 2xl:gap-20">
+        <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 sm:px-6 lg:px-8 py-10 md:grid-cols-2 md:items-center md:py-14 2xl:max-w-screen-2xl 2xl:gap-20">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">Grow with Grove Vista Properties</p>
             <h2 className="font-serif mt-3 text-3xl font-bold leading-tight text-white md:text-4xl">
@@ -327,7 +325,7 @@ export default function CareersSection() {
 
       {/* ── Why Work at Grove Vista ── */}
       <section className="bg-[#e8f0f7] py-14 md:py-20 2xl:py-28">
- <div className="mx-auto max-w-7xl px-12 md:px-16 2xl:max-w-screen-2xl"> 
+ <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-screen-2xl"> 
           <div className="flex flex-col items-center gap-10 md:flex-row md:gap-14">
 
             {/* Image */}
@@ -372,7 +370,7 @@ export default function CareersSection() {
       </section>
 
       <section className="bg-slate-100 py-12 md:py-16 2xl:py-20">
- <div className="mx-auto w-full max-w-7xl px-12 md:px-16 text-center 2xl:max-w-screen-2xl"> 
+ <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 text-center 2xl:max-w-screen-2xl"> 
           <h2 className="font-serif text-3xl font-semibold text-slate-900 md:text-4xl">Benefits and perks</h2>
           <p className="mx-auto mt-3 max-w-2xl text-base leading-relaxed text-slate-600">
             We invest in people first. Our benefits package is designed to support your professional growth, wellbeing, and long-term success.
@@ -388,7 +386,7 @@ export default function CareersSection() {
 
       {/* ── Photo Grid ── */}
       <section className="w-full py-16 bg-white 2xl:py-24">
- <div className="mx-auto max-w-7xl px-12 md:px-16 2xl:max-w-screen-2xl"> 
+ <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 2xl:max-w-screen-2xl"> 
           <div className="mb-10 text-center">
             <p className="font-accent mb-3 text-xs font-bold uppercase tracking-[0.25em] text-amber-600">Life at Grove Vista</p>
             <h2 className="font-serif text-3xl font-semibold text-slate-900 md:text-4xl">Where ambition meets opportunity</h2>
@@ -465,7 +463,7 @@ export default function CareersSection() {
 
 
        <section id="form" className="bg-slate-100">
- <div className="mx-auto grid w-full max-w-7xl gap-8 px-12 md:px-16 py-12 md:grid-cols-2 md:items-center md:gap-10 md:py-16 2xl:max-w-screen-2xl 2xl:gap-20 2xl:py-20"> 
+        <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 sm:px-6 lg:px-8 py-12 md:grid-cols-2 md:items-start lg:items-center md:gap-10 md:py-16 2xl:max-w-screen-2xl 2xl:gap-20 2xl:py-20">
           <div>
             <h2 className="font-serif text-3xl font-semibold text-slate-900 md:text-4xl">
               Take the next step in your real estate career across India

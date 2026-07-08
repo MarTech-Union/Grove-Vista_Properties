@@ -180,7 +180,7 @@ export default function Header() {
             width={180}
             height={45}
             priority
-            className="w-[180px] h-auto"
+            style={{ width: "180px", height: "auto" }}
           />
         </Link>
 
