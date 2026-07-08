@@ -202,7 +202,7 @@ export default function Header() {
               }}
             >
               <button
-                className={`flex items-center gap-1.5 rounded-lg px-5 py-2.5 text-[14px] font-semibold transition-all duration-200 ${
+                className={`flex whitespace-nowrap items-center gap-1.5 rounded-lg px-3 xl:px-4 py-2.5 text-[14px] font-semibold transition-all duration-200 ${
                   activeMenu === menu
                     ? "bg-amber-50/80 text-amber-400"
                     : "text-slate-700 hover:bg-slate-50 hover:text-amber-400"
@@ -312,12 +312,12 @@ export default function Header() {
         </nav>
 
         {/* ── Desktop CTA ── */}
-        <div className="hidden shrink-0 items-center gap-3 lg:flex">
+        <div className="hidden shrink-0 items-center gap-2 xl:gap-3 lg:flex">
           <a
             href="tel:+919082799951"
-            className="flex items-center gap-2 text-[13px] font-bold text-slate-700 transition-colors hover:text-amber-400"
+            className="flex whitespace-nowrap items-center gap-2 text-[12px] xl:text-[13px] font-bold text-slate-700 transition-colors hover:text-amber-400"
           >
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50">
+            <span className="flex h-7 w-7 xl:h-8 xl:w-8 items-center justify-center rounded-full bg-blue-50">
               <svg
                 className="h-4 w-4 text-blue-600"
                 fill="none"
@@ -340,9 +340,9 @@ export default function Header() {
 
           <a
             href="tel:+918928799951"
-            className="flex items-center gap-2 text-[13px] font-bold text-slate-700 transition-colors hover:text-amber-400"
+            className="flex whitespace-nowrap items-center gap-2 text-[12px] xl:text-[13px] font-bold text-slate-700 transition-colors hover:text-amber-400"
           >
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50">
+            <span className="flex h-7 w-7 xl:h-8 xl:w-8 items-center justify-center rounded-full bg-blue-50">
               <svg
                 className="h-4 w-4 text-blue-600"
                 fill="none"
@@ -364,7 +364,7 @@ export default function Header() {
           <div className="h-6 w-px bg-slate-200" />
 
           <button
-            className="rounded-xl bg-slate-900 px-5 py-2.5 text-[14px] font-bold text-white shadow-md shadow-slate-500/20 transition-all duration-200 hover:bg-slate-700 hover:shadow-lg hover:shadow-slate-500/30"
+            className="whitespace-nowrap rounded-xl bg-slate-900 px-4 xl:px-5 py-2.5 text-[13px] xl:text-[14px] font-bold text-white shadow-md shadow-slate-500/20 transition-all duration-200 hover:bg-slate-700 hover:shadow-lg hover:shadow-slate-500/30"
             onClick={() => router.push("/contact")}
             type="button"
           >
