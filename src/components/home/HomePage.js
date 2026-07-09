@@ -13,18 +13,14 @@ import FeaturedListings from "@/components/home/FeaturedListings";
 
 
 const service = [
-  { title: "Home Loan", icon: "/icons/home-loan.png" },
-  { title: "Home Interior Design", icon: "/icons/home-interior.png" },
-  { title: "Property Legal Services",icon:"/icons/propery-legal-services.png"},
-  { title: "Property Management", icon:"/icons/property-management.png"},
-  { title: "Escrow Services",icon:"/icons/escrow-services.png" },
-  { title: "Online Rent Agreement",icon:"/icons/online-rent-agreement.png" },
-  { title: "Rent Receipt Generator",icon:"/icons/online-rent-receipt-generator.png" },
-  { title: "Sell or Rent Property", icon:"/icons/sell-or-rent-property.png"},
-  { title: "Title Search",icon:"/icons/title-search.png"},
-  { title: "Litigation",icon:"/icons/litigation.png"},
-  { title: "Valuation", icon:"/icons/valuation.png" },
-  { title: "Property Registration",icon:"/icons/property-registration.png" },
+  { title: "Home Loan", icon: "https://ik.imagekit.io/kc8kqzi2u/Grove%20Vista%20Properties/Home/Home%20Loan.webp" },
+  { title: "Home Interior Design", icon: "https://ik.imagekit.io/kc8kqzi2u/Grove%20Vista%20Properties/Home/Home%20Interior%20Design.webp" },
+  { title: "Property Legal Services",icon:"https://ik.imagekit.io/kc8kqzi2u/Grove%20Vista%20Properties/Home/Property%20Legal%20Services.webp"},
+  { title: "Rent Receipt Generator",icon:"https://ik.imagekit.io/kc8kqzi2u/Grove%20Vista%20Properties/Home/Rent%20Receipt%20Generator.webp" },
+  { title: "Title Search",icon:"https://ik.imagekit.io/kc8kqzi2u/Grove%20Vista%20Properties/Home/Title%20Search.webp"},
+  { title: "Litigation",icon:"https://ik.imagekit.io/kc8kqzi2u/Grove%20Vista%20Properties/Home/Litigation.webp"},
+  { title: "Valuation", icon:"https://ik.imagekit.io/kc8kqzi2u/Grove%20Vista%20Properties/Home/Valuation.webp" },
+  { title: "Property Registration",icon:"https://ik.imagekit.io/kc8kqzi2u/Grove%20Vista%20Properties/Home/Property%20Registration.webp" },
 ];
 
 const heroVideo =
@@ -239,7 +235,7 @@ export default function HomePage({ latestBlogs = [] }) {
             <h2 className="font-serif mb-5 text-center text-[clamp(1.7rem,3vw,2.4rem)] font-semibold text-slate-900">
               Everything you Need at One Place
             </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-6 mt-10 gap-4 2xl:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-8 mt-10 gap-4 2xl:gap-6">
           
           {service.map((service, index) => (
             <div

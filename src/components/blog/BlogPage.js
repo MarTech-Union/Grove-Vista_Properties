@@ -132,17 +132,16 @@ export default function BlogPage({ blogs = [] }) {
                         sizes="(max-width: 640px) 100vw, 50vw"
                       />
                       {/* category pill over image */}
-                      <span className={`absolute left-4 top-4 inline-flex rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-widest ring-1 backdrop-blur-sm ${categoryColors[blog.category] ?? "bg-white/80 text-slate-600 ring-slate-200"}`}>
-                        {blog.category}
-                      </span>
+                      
                     </div>
 
                     {/* Body */}
                     <div className="flex flex-1 flex-col p-6">
                       <div className="mb-2 flex items-center gap-3 text-[12px] text-slate-400">
+                        <span className={`inline-flex rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest ring-1 ${categoryColors[blog.category] ?? "bg-slate-100 text-slate-600 ring-slate-200"}`}>
+                          {blog.category}
+                        </span>
                         <span>{blog.date}</span>
-                        <span className="h-1 w-1 rounded-full bg-slate-300" />
-                        <span>{blog.readTime}</span>
                       </div>
                       <h2 className="font-serif mb-3 line-clamp-2 text-[16px] font-semibold leading-snug text-slate-900 transition-colors group-hover:text-blue-700">
                         {blog.title}
@@ -150,11 +149,15 @@ export default function BlogPage({ blogs = [] }) {
                       <p className="mb-5 flex-1 line-clamp-2 text-[13.5px] leading-relaxed text-slate-500">
                         {blog.excerpt}
                       </p>
-                      <div className="flex items-center gap-1.5 text-[13px] font-bold text-amber-400 transition-all group-hover:gap-3">
-                        Read Article
-                        <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                        </svg>
+                      <div className="flex items-center justify-between mt-auto">
+                        <span className="text-[12px] font-medium text-slate-400">{blog.readTime}</span>
+                        <div className="flex items-center gap-1.5 text-[13px] font-bold text-amber-400 transition-all group-hover:gap-3">
+                          Read Article
+                          <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </div>
+                        
                       </div>
                     </div>
                   </article>
