@@ -215,7 +215,7 @@ export default function ContactSection() {
           <p className="mb-12 text-[15px] leading-relaxed text-slate-500">
             Get in touch for tailored guidance from our expert team. We are
             committed to assisting you through every step of your journey in the
-            dynamic Indian real estate market.
+            dynamic Mumbai real estate market.
           </p>
 
           <div className="space-y-5">
@@ -344,7 +344,7 @@ export default function ContactSection() {
               <textarea
                 rows={4}
                 name="message"
-                placeholder="Tell us about your property requirements across India..."
+                placeholder="Tell us about your property requirements across Mumbai..."
                 value={formData.message}
                 onChange={handleInputChange}
                 className="w-full resize-none rounded-xl border border-white bg-white/50 p-3.5 text-[14.5px] font-medium text-slate-800 placeholder:text-slate-400 shadow-sm transition-all focus:outline-none focus:ring-2 focus:ring-blue-500/50"

@@ -44,7 +44,7 @@ export default function Footer() {
             <h2 className="font-serif text-xl font-semibold text-white">Grove Vista Properties</h2>
             <p className="mt-3 max-w-sm text-[13px] leading-relaxed text-slate-400">
               Premium real estate advisory for buyers, investors, and renters
-              across India&apos;s top cities.
+              across Mumbai&apos;s top cities.
             </p>
           </div>
 

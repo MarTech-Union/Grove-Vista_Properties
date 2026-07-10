@@ -141,7 +141,7 @@ export default function LodhaPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent" />
                 <div className="absolute bottom-6 left-6">
                   <p className="font-accent text-[10px] font-bold uppercase tracking-[0.2em] text-amber-400">Since 1980</p>
-                  <p className="font-serif text-xl font-semibold text-white">Shaping Indian Real Estate</p>
+                  <p className="font-serif text-xl font-semibold text-white">Shaping Mumbai Real Estate</p>
                 </div>
               </div>
               <div className="absolute -bottom-5 -right-2 sm:-right-5 rounded-2xl border border-white/10 bg-slate-800 px-6 py-4 shadow-2xl">

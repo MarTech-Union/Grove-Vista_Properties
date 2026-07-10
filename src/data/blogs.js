@@ -100,7 +100,7 @@ export const blogs = [
       },
       {
         type: "p",
-        text: "Worli is Mumbai's most prestigious address in 2026. It has sea views, South Mumbai connectivity, and some of the tallest residential towers in India. Property rates here range from INR 70,000 to INR 1,10,000 per sq ft for standard luxury floors. Ultra-luxury sea-facing units and penthouses go beyond INR 1,20,000 per sq ft. Worli attracts CEOs, entrepreneurs, and NRI investors. Projects like Lodha Bellevue and Raheja Riviere are among the most active in 2026. If you want an address that holds value in every market cycle, Worli is it.",
+        text: "Worli is Mumbai's most prestigious address in 2026. It has sea views, South Mumbai connectivity, and some of the tallest residential towers in Mumbai. Property rates here range from INR 70,000 to INR 1,10,000 per sq ft for standard luxury floors. Ultra-luxury sea-facing units and penthouses go beyond INR 1,20,000 per sq ft. Worli attracts CEOs, entrepreneurs, and NRI investors. Projects like Lodha Bellevue and Raheja Riviere are among the most active in 2026. If you want an address that holds value in every market cycle, Worli is it.",
       },
       {
         type: "h3",
@@ -116,7 +116,7 @@ export const blogs = [
       },
       {
         type: "p",
-        text: "Juhu gives buyers something that most of Mumbai cannot: a sea-facing address with spacious homes. A 4BHK luxury flat in Juhu can span over 7,000 sq ft and be priced at INR 45 crore or more. Juhu is popular with Bollywood families, NRIs returning to India, and buyers who want quieter surroundings. Airport access is excellent. The social scene is vibrant but not overwhelming. If space is your priority, Juhu delivers.",
+        text: "Juhu gives buyers something that most of Mumbai cannot: a sea-facing address with spacious homes. A 4BHK luxury flat in Juhu can span over 7,000 sq ft and be priced at INR 45 crore or more. Juhu is popular with Bollywood families, NRIs returning to Mumbai, and buyers who want quieter surroundings. Airport access is excellent. The social scene is vibrant but not overwhelming. If space is your priority, Juhu delivers.",
       },
       {
         type: "h3",
@@ -132,7 +132,7 @@ export const blogs = [
       },
       {
         type: "p",
-        text: "Andheri West is where the luxury market meets practical urban living. You get metro access, airport proximity, BKC connectivity, and a city lifestyle. Premium sky homes here start around INR 4 crore for 3BHKs and go up to INR 35 crore for larger, view-facing configurations. Andheri West attracts buyers who want luxury without the extreme price tags of Worli or Bandra. It is also popular with NRIs who want a well-connected address that is easy to manage when they are not in India.",
+        text: "Andheri West is where the luxury market meets practical urban living. You get metro access, airport proximity, BKC connectivity, and a city lifestyle. Premium sky homes here start around INR 4 crore for 3BHKs and go up to INR 35 crore for larger, view-facing configurations. Andheri West attracts buyers who want luxury without the extreme price tags of Worli or Bandra. It is also popular with NRIs who want a well-connected address that is easy to manage when they are not in Mumbai.",
       },
       {
         type: "h3",
@@ -209,7 +209,7 @@ export const blogs = [
       },
       {
         type: "p",
-        text: "Over 24 percent of Mumbai's luxury property buyers in 2026 came from outside the city. A large share of these are NRIs based in Dubai, Singapore, London, and the US. NRIs can buy residential property in Mumbai without any special RBI approval under FEMA 1999. Payments must go through an NRE or NRO account. If you cannot be present in India for registration, a notarised Power of Attorney allows a trusted person to complete the process on your behalf. NRI home loans are available from most major Indian banks, covering 70 to 80 percent of the property value.",
+        text: "Over 24 percent of Mumbai's luxury property buyers in 2026 came from outside the city. A large share of these are NRIs based in Dubai, Singapore, London, and the US. NRIs can buy residential property in Mumbai without any special RBI approval under FEMA 1999. Payments must go through an NRE or NRO account. If you cannot be present in Mumbai for registration, a notarised Power of Attorney allows a trusted person to complete the process on your behalf. NRI home loans are available from most major Mumbain banks, covering 70 to 80 percent of the property value.",
       },
       {
         type: "h2",
@@ -555,8 +555,8 @@ export const blogs = [
             a: "Go to the MahaRERA portal at maharerait.mahaonline.gov.in and search by the project name or registration number. Verified RERA projects have committed delivery dates and financial disclosures. Grove Vista Properties lists RERA registration details for every project on our platform.",
           },
           {
-            q: "Can I buy a 2BHK flat in Mumbai if I live outside India?",
-            a: "Yes. NRIs and OCI cardholders can buy residential property in Mumbai under FEMA 1999. Payments go through an NRE or NRO account. A Power of Attorney allows someone in India to complete registration on your behalf. Grove Vista Properties has handled hundreds of NRI purchases and can guide you through the process remotely.",
+            q: "Can I buy a 2BHK flat in Mumbai if I live outside Mumbai?",
+            a: "Yes. NRIs and OCI cardholders can buy residential property in Mumbai under FEMA 1999. Payments go through an NRE or NRO account. A Power of Attorney allows someone in Mumbai to complete registration on your behalf. Grove Vista Properties has handled hundreds of NRI purchases and can guide you through the process remotely.",
           },
         ],
       },
@@ -594,7 +594,7 @@ export const blogs = [
       },
       {
         type: "p",
-        text: "Mumbai is India's most expensive property market. Buying a flat in a decent area requires a minimum of INR 1 crore, and most working professionals start by renting. Even those who can afford to buy sometimes choose to rent because it gives flexibility.",
+        text: "Mumbai is Mumbai's most expensive property market. Buying a flat in a decent area requires a minimum of INR 1 crore, and most working professionals start by renting. Even those who can afford to buy sometimes choose to rent because it gives flexibility.",
       },
       {
         type: "p",
@@ -611,7 +611,7 @@ export const blogs = [
       },
       {
         type: "callout",
-        text: "India's residential rental market saw average rents grow by close to 30 percent year on year in mid-2025. That growth has moderated in 2026, but rents remain elevated in well-connected areas. Understanding the rental map before you search saves both time and money.",
+        text: "Mumbai's residential rental market saw average rents grow by close to 30 percent year on year in mid-2025. That growth has moderated in 2026, but rents remain elevated in well-connected areas. Understanding the rental map before you search saves both time and money.",
       },
       {
         type: "h2",
@@ -882,7 +882,7 @@ export const blogs = [
           },
           {
             q: "Can NRIs rent a house in Mumbai?",
-            a: "Yes. NRIs can rent property in Mumbai without any restrictions. Grove Vista Properties offers managed rental services for NRIs, including property selection, agreement signing via Power of Attorney, and property management while you are outside India.",
+            a: "Yes. NRIs can rent property in Mumbai without any restrictions. Grove Vista Properties offers managed rental services for NRIs, including property selection, agreement signing via Power of Attorney, and property management while you are outside Mumbai.",
           },
           {
             q: "How do I find a genuine rental listing in Mumbai and avoid fraud?",

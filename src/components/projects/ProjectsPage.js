@@ -123,10 +123,10 @@ export default function ProjectsPage() {
             <p className="font-accent mb-4 text-xs font-bold uppercase tracking-[0.25em] text-amber-400">Our Portfolio</p>
             <h1 className="font-serif text-[clamp(2.2rem,5vw,3.8rem)] font-semibold leading-tight text-white">
               Landmark projects<br />
-              <span className="text-blue-300">across India.</span>
+              <span className="text-blue-300">across Mumbai.</span>
             </h1>
             <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-white/65">
-              We partner exclusively with India&apos;s five most trusted developers — bringing you verified inventory, pre-launch access, and expert advisory under one roof.
+              We partner exclusively with Mumbai&apos;s five most trusted developers — bringing you verified inventory, pre-launch access, and expert advisory under one roof.
             </p>
           </div>
         </div>
@@ -273,7 +273,7 @@ export default function ProjectsPage() {
             <div>
               <p className="font-accent mb-3 text-xs font-bold uppercase tracking-[0.2em] text-amber-400">Developer Partnerships</p>
               <h2 className="font-serif text-2xl font-semibold text-slate-900 md:text-3xl">
-                India&apos;s most trusted developers,<br className="hidden md:block" /> one advisory partner.
+                Mumbai&apos;s most trusted developers,<br className="hidden md:block" /> one advisory partner.
               </h2>
             </div>
             <p className="max-w-sm text-sm text-slate-500 md:text-right">

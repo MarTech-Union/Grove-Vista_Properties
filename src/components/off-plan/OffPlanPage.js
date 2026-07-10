@@ -110,7 +110,7 @@ export default function OffPlanPage() {
             <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-            <span className="text-white/80">Off-Plan Properties in India</span>
+            <span className="text-white/80">Off-Plan Properties in Mumbai</span>
           </nav>
 
           <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -121,10 +121,10 @@ export default function OffPlanPage() {
               </span>
               <h1 className="font-serif mt-3 text-[clamp(2.4rem,5vw,3.8rem)] font-semibold leading-tight text-white">
                 Off-Plan Properties<br />
-                <span className="text-amber-400">in India</span>
+                <span className="text-amber-400">in Mumbai</span>
               </h1>
               <p className="mt-5 max-w-lg text-lg leading-relaxed text-slate-400">
-                Invest early in India&apos;s most exciting upcoming projects — RERA-registered, developer-verified, with flexible payment plans tailored for you.
+                Invest early in Mumbai&apos;s most exciting upcoming projects — RERA-registered, developer-verified, with flexible payment plans tailored for you.
               </p>
 
             </div>
@@ -134,7 +134,7 @@ export default function OffPlanPage() {
               <div className="relative h-[300px] sm:h-[350px] lg:h-[440px] overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
                 <Image
                   src={heroImage}
-                  alt="Off-plan property in India"
+                  alt="Off-plan property in Mumbai"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -143,7 +143,7 @@ export default function OffPlanPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent" />
                 <div className="absolute bottom-6 left-6">
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-amber-400">New Launches</p>
-                  <p className="font-serif text-xl font-semibold text-white">Upcoming Projects Across India</p>
+                  <p className="font-serif text-xl font-semibold text-white">Upcoming Projects Across Mumbai</p>
                 </div>
               </div>
               
@@ -192,7 +192,7 @@ export default function OffPlanPage() {
           <div>
             <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-amber-600 mb-1">Live Listings</p>
             <h2 className="font-serif text-3xl font-bold text-slate-900">
-              {propertyFor === "commercial" ? "Commercial" : "Residential"} Off-Plan Projects in India
+              {propertyFor === "commercial" ? "Commercial" : "Residential"} Off-Plan Projects in Mumbai
             </h2>
             <p className="mt-1 text-sm text-slate-500">
               <span className="font-bold text-slate-900">{filteredProperties.length}</span> projects found

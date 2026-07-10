@@ -96,7 +96,6 @@ const menuItemRoutes = {
   "Contact Us": "/contact",
   Careers: "/careers",
   Blogs: "/blog",
-  "EMI Calculator": "/services/emiCalculator",
 
   "Lodha Group": "/lodha-group",
   "Oberoi Realty": "/oberoi-realty",

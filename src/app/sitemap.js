@@ -13,8 +13,7 @@ const STATIC_ROUTES = [
   { url: "/contact", priority: 0.7, changeFrequency: "monthly" },
   { url: "/careers", priority: 0.6, changeFrequency: "monthly" },
   { url: "/faq", priority: 0.6, changeFrequency: "monthly" },
-  { url: "/services", priority: 0.6, changeFrequency: "monthly" },
-  { url: "/services/emiCalculator", priority: 0.5, changeFrequency: "monthly" },
+  
   { url: "/testimonials", priority: 0.5, changeFrequency: "monthly" },
   { url: "/news", priority: 0.8, changeFrequency: "weekly" },
   { url: "/godrej-properties", priority: 0.7, changeFrequency: "weekly" },

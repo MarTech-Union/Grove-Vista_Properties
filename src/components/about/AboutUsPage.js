@@ -30,17 +30,17 @@ const valuesData = [
   },
   {
     tag: "Vision",
-    heading: "India's most trusted name in luxury real estate",
+    heading: "Mumbai's most trusted name in luxury real estate",
     description:
       "To be the most trusted and innovative real estate partner, driving growth and creating value for our clients, employees, and stakeholders.",
     bullets: [
       "Setting the benchmark for luxury property advisory",
-      "Expanding across India's fastest-growing cities",
+      "Expanding across Mumbai's fastest-growing cities",
       "Building long-term relationships, not one-time transactions",
     ],
     image:
       "https://ik.imagekit.io/kc8kqzi2u/Grove%20Vista%20Properties/About%20/vision-about.webp",
-    imageAlt: "Grove Vista vision - India's trusted luxury real estate partner",
+    imageAlt: "Grove Vista vision - Mumbai's trusted luxury real estate partner",
     reverse: true,
   },
 ];
@@ -85,7 +85,7 @@ export default function AboutUsPage() {
             </h1>
             <p className="mt-5 text-sm leading-relaxed text-gray-300 sm:text-base md:mt-6 md:text-lg">
               Dear Valued Clients &amp; Partners, At Grove Vista Properties,
-              excellence is our foundation. With over 22 years in India&apos;s
+              excellence is our foundation. With over 22 years in Mumbai&apos;s
               property market, I co-founded Grove Vista with one vision - to
               make real estate seamless, transparent, and truly personal. We
               specialise in residential, commercial, and luxury real estate,
@@ -129,7 +129,7 @@ export default function AboutUsPage() {
               Building excellence for generations
             </h2>
             <p className="mt-5 text-base leading-relaxed text-slate-600 md:text-lg">
-              GroveVista is one of India&apos;s leading full-stack real estate
+              GroveVista is one of Mumbai&apos;s leading full-stack real estate
               advisory platforms, helping homebuyers discover, evaluate and buy
               their dream homes with confidence. With years of ground expertise
               across major cities, GroveVista provides unmatched end-to-end

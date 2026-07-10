@@ -11,7 +11,7 @@ const keyFacts = [
   { value: "127+", label: "Years of Godrej legacy" },
   { value: "20M+", label: "Sq. ft. delivered" },
   { value: "80+", label: "Projects delivered" },
-  { value: "12", label: "Cities across India" },
+  { value: "12", label: "Cities across Mumbai" },
 ];
 
 const storyCards = [
@@ -57,7 +57,7 @@ const storyCards = [
 const leadershipItems = [
   {
     title: "Our Journey Since 1897",
-    desc: "Founded by Ardeshir Godrej, the Godrej Group has grown from a locks business into a global conglomerate — touching the lives of 1.1 billion consumers worldwide, with engines even powering India's space missions.",
+    desc: "Founded by Ardeshir Godrej, the Godrej Group has grown from a locks business into a global conglomerate — touching the lives of 1.1 billion consumers worldwide, with engines even powering Mumbai's space missions.",
     icon: (
       <svg className="h-6 w-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -133,7 +133,7 @@ export default function GodrejPage() {
                 Godrej Properties
               </h1>
               <p className="mt-5 max-w-lg text-lg leading-relaxed text-slate-400">
-                Every Godrej Properties development combines a 127-year legacy of excellence and trust with a commitment to cutting-edge design and technology — bringing the Godrej Group&apos;s philosophy of innovation and sustainability to Indian real estate.
+                Every Godrej Properties development combines a 127-year legacy of excellence and trust with a commitment to cutting-edge design and technology — bringing the Godrej Group&apos;s philosophy of innovation and sustainability to Mumbai real estate.
               </p>
 
               {/* Key stats */}
@@ -161,7 +161,7 @@ export default function GodrejPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent" />
                 <div className="absolute bottom-6 left-6">
                   <p className="font-accent text-[10px] font-bold uppercase tracking-[0.2em] text-amber-400">Since 1897</p>
-                  <p className="font-serif text-xl font-semibold text-white">Shaping Indian Real Estate</p>
+                  <p className="font-serif text-xl font-semibold text-white">Shaping Mumbai Real Estate</p>
                 </div>
               </div>
               <div className="absolute -bottom-5 -right-2 sm:-right-5 rounded-2xl border border-white/10 bg-slate-800 px-6 py-4 shadow-2xl">

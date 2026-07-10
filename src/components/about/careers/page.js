@@ -54,25 +54,25 @@ const benefits = [
 
 const insights = [
   {
-    title: "An update from Grove Vista India leadership",
+    title: "An update from Grove Vista Mumbai leadership",
     image:
       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=80",
     link: "#",
   },
   {
-    title: "Why professionals are choosing India real estate careers in 2026",
+    title: "Why professionals are choosing Mumbai real estate careers in 2026",
     image:
       "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=80",
     link: "#",
   },
   {
-    title: "How India&apos;s prime neighborhoods are shaping property demand",
+    title: "How Mumbai&apos;s prime neighborhoods are shaping property demand",
     image:
       "https://images.unsplash.com/photo-1470004914212-05527e49370b?auto=format&fit=crop&w=1000&q=80",
     link: "#",
   },
   {
-    title: "India property market outlook for 2026",
+    title: "Mumbai property market outlook for 2026",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80",
     link: "#",
@@ -276,7 +276,7 @@ export default function CareersSection() {
 
  <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-16 2xl:max-w-screen-2xl 2xl:py-20"> 
         <div className="mb-6">
-          <h2 className="font-serif text-3xl font-semibold text-slate-900 md:text-4xl">Latest India team updates</h2>
+          <h2 className="font-serif text-3xl font-semibold text-slate-900 md:text-4xl">Latest Mumbai team updates</h2>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 2xl:gap-8">
@@ -293,10 +293,10 @@ export default function CareersSection() {
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">Grow with Grove Vista Properties</p>
             <h2 className="font-serif mt-3 text-3xl font-bold leading-tight text-white md:text-4xl">
-              Real Estate Careers Across India
+              Real Estate Careers Across Mumbai
             </h2>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-300">
-              Join a fast-moving team reshaping how buyers and investors discover premium real estate opportunities across India.
+              Join a fast-moving team reshaping how buyers and investors discover premium real estate opportunities across Mumbai.
             </p>
             <a
               href="/careers#form"
@@ -309,7 +309,7 @@ export default function CareersSection() {
           <div className="  relative h-[280px] overflow-hidden rounded-2xl border border-white/10 sm:h-[340px] md:h-[420px]">
             <Image
               src={heroImage}
-              alt="Modern skyline representing real estate careers across India"
+              alt="Modern skyline representing real estate careers across Mumbai"
               fill
               priority
               className="object-cover"
@@ -446,7 +446,7 @@ export default function CareersSection() {
             <div className="group relative col-start-1 col-span-1 row-start-4 row-span-1 sm:col-start-1 sm:col-span-2 sm:row-start-3 sm:row-span-1 lg:col-start-2 lg:col-span-2 lg:row-start-2 lg:row-span-1 cursor-pointer overflow-hidden rounded-xl shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
               <Image
                 src="https://ik.imagekit.io/kc8kqzi2u/Grove%20Vista%20Properties/Career/career-card-property.webp"
-                alt="Premium properties across India"
+                alt="Premium properties across Mumbai"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
                 sizes="(max-width: 768px) 100vw, 66vw"
@@ -454,7 +454,7 @@ export default function CareersSection() {
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent transition-opacity duration-300 group-hover:from-black/80" />
               <div className="absolute bottom-4 left-5 transition-all duration-300 group-hover:bottom-5">
                 <p className="text-xs font-bold uppercase tracking-widest text-amber-400">Premium Projects</p>
-                <p className="mt-1 text-sm font-semibold text-white">Listing India&apos;s finest properties</p>
+                <p className="mt-1 text-sm font-semibold text-white">Listing Mumbai&apos;s finest properties</p>
               </div>
             </div>
           </div>
@@ -466,10 +466,10 @@ export default function CareersSection() {
         <div className="mx-auto grid w-full max-w-7xl gap-8 px-4 sm:px-6 lg:px-8 py-12 md:grid-cols-2 md:items-start lg:items-center md:gap-10 md:py-16 2xl:max-w-screen-2xl 2xl:gap-20 2xl:py-20">
           <div>
             <h2 className="font-serif text-3xl font-semibold text-slate-900 md:text-4xl">
-              Take the next step in your real estate career across India
+              Take the next step in your real estate career across Mumbai
             </h2>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-600">
-              Build your future with mentoring, transparent growth tracks, and strong earning potential in India&apos;s performance-oriented real estate market.
+              Build your future with mentoring, transparent growth tracks, and strong earning potential in Mumbai&apos;s performance-oriented real estate market.
             </p>
 
             <div className="relative mt-8 h-[240px] overflow-hidden rounded-2xl border border-slate-200 sm:h-[300px] md:h-[340px]">

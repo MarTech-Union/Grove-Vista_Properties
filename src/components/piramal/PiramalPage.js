@@ -44,7 +44,7 @@ const storyCards = [
   },
   {
     title: "Impact",
-    desc: "Piramal pursues leadership through excellence, growth, and sustainable results — aiming to be India's most admired real estate company for its impact on lives and communities.",
+    desc: "Piramal pursues leadership through excellence, growth, and sustainable results — aiming to be Mumbai's most admired real estate company for its impact on lives and communities.",
     icon: (
       <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
@@ -57,7 +57,7 @@ const storyCards = [
 const leadershipItems = [
   {
     title: "Our Vision",
-    desc: "To be India's most admired real estate company — admired not only for its scale and profitability, but for its meaningful impact on the lives of customers and the progress of communities.",
+    desc: "To be Mumbai's most admired real estate company — admired not only for its scale and profitability, but for its meaningful impact on the lives of customers and the progress of communities.",
     icon: (
       <svg className="h-6 w-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />

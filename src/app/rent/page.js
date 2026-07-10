@@ -2,8 +2,8 @@ import { Suspense } from "react";
 import RentPage from "@/components/rent/RentPage";
 
 export const metadata = {
-  title: "Properties for Rent in India",
-  description: "Browse rental properties across India.",
+  title: "Properties for Rent in Mumbai",
+  description: "Browse rental properties across Mumbai.",
 };
 
 export default function RentPageRoute() {

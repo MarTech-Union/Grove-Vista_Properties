@@ -2,21 +2,21 @@ import HomePage from "@/components/home/HomePage";
 import { getCollection } from "@/lib/mongodb";
 
 export const metadata = {
-  title: "Luxury Real Estate in India",
+  title: "Luxury Real Estate in Mumbai",
   description:
-    "Explore premium Indian real estate with Grove Vista Properties. Find luxury apartments, villas and investment opportunities with expert guidance.",
+    "Explore premium Mumbain real estate with Grove Vista Properties. Find luxury apartments, villas and investment opportunities with expert guidance.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Grove Vista Properties | Luxury Real Estate in India",
-    description: "Discover premium listings and property advisory support across India.",
+    title: "Grove Vista Properties | Luxury Real Estate in Mumbai",
+    description: "Discover premium listings and property advisory support across Mumbai.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Grove Vista Properties",
-    description: "Luxury apartments, villas and investment-ready properties in India.",
+    description: "Luxury apartments, villas and investment-ready properties in Mumbai.",
   },
 };
 

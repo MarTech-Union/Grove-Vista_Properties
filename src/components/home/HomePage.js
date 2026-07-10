@@ -67,10 +67,10 @@ export default function HomePage({ latestBlogs = [] }) {
  <div className="relative z-10 mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center 2xl:max-w-5xl"> 
           <h1 className="font-serif mb-6 text-[clamp(2.4rem,6vw,4rem)] font-bold leading-tight tracking-tight text-white 2xl:text-[4.5rem]">
             Find Your Dream
-            <span className="block text-blue-300 drop-shadow-lg">Property in India</span>
+            <span className="block text-blue-300 drop-shadow-lg">Property in Mumbai</span>
           </h1>
           <p className="mx-auto mb-12 max-w-2xl text-lg font-medium text-slate-100 drop-shadow-md 2xl:max-w-3xl 2xl:text-xl">
-            Explore thousands of verified listings with exclusive deals and expert guidance across India.
+            Explore thousands of verified listings with exclusive deals and expert guidance across Mumbai.
           </p>
 
           <div className="mx-auto max-w-3xl rounded-3xl border border-white/20 bg-white/10 p-3 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] backdrop-blur-xl 2xl:max-w-4xl">
@@ -125,10 +125,10 @@ export default function HomePage({ latestBlogs = [] }) {
           <div className="mb-14">
             <p className="font-accent mb-3 text-xs font-bold uppercase tracking-[0.2em] text-amber-400">What We Offer</p>
             <h2 className="font-serif mb-4 text-[clamp(1.9rem,3.5vw,2.8rem)] font-semibold leading-tight text-slate-900">
-              Pan-India Real Estate Solutions
+              Mumbai Real Estate Solutions
             </h2>
             <p className="max-w-xl text-[15px] leading-relaxed text-slate-500">
-              Focused around exceptional customer service and proven expertise across the entire Indian market.
+              Focused around exceptional customer service and proven expertise across the entire Mumbai market.
             </p>
           </div>
 
@@ -143,7 +143,7 @@ export default function HomePage({ latestBlogs = [] }) {
                 Connect with a Specialist
               </h3>
               <p className="text-[13.5px] leading-relaxed text-slate-500">
-                Access our team of expert agents ready to assist you with finding your dream property in India.
+                Access our team of expert agents ready to assist you with finding your dream property in Mumbai.
               </p>
             </div>
 
@@ -171,7 +171,7 @@ export default function HomePage({ latestBlogs = [] }) {
                 Download Report
               </h3>
               <p className="text-[13.5px] leading-relaxed text-slate-500">
-                Get the latest Indian real estate market reports with actionable insights and trends.
+                Get the latest Mumbai real estate market reports with actionable insights and trends.
               </p>
             </div>
 
@@ -270,7 +270,7 @@ export default function HomePage({ latestBlogs = [] }) {
             <div>
               <p className="font-accent mb-4 text-xs font-bold uppercase tracking-[0.2em] text-amber-400">Why Choose Us</p>
               <h2 className="font-serif mb-5 text-[clamp(1.9rem,3.5vw,2.8rem)] font-semibold leading-tight text-white">
-                India&apos;s Premier Property Marketplace
+                Mumbai&apos;s Premier Property Marketplace
               </h2>
               <p className="max-w-md text-[15px] leading-relaxed text-slate-400">
                 We combine deep market expertise with cutting-edge technology to deliver exceptional results for every client across the country.
@@ -306,7 +306,7 @@ export default function HomePage({ latestBlogs = [] }) {
                 </div>
                 <div>
                   <h3 className="font-serif mb-1.5 text-[16px] font-semibold text-white">Exclusive Access to Prime Properties</h3>
-                  <p className="text-[13.5px] leading-relaxed text-slate-400">Gain priority access to exclusive listings and upcoming developments across top markets in India before they go public.</p>
+                  <p className="text-[13.5px] leading-relaxed text-slate-400">Gain priority access to exclusive listings and upcoming developments across top markets in Mumbai before they go public.</p>
                 </div>
               </div>
 
@@ -330,7 +330,7 @@ export default function HomePage({ latestBlogs = [] }) {
                 </div>
                 <div>
                   <h3 className="font-serif mb-1.5 text-[16px] font-semibold text-white">Expert Guidance in Current Market</h3>
-                  <p className="text-[13.5px] leading-relaxed text-slate-400">Make informed decisions with strategic insights and comprehensive data on the dynamic Indian real estate market.</p>
+                  <p className="text-[13.5px] leading-relaxed text-slate-400">Make informed decisions with strategic insights and comprehensive data on the dynamic Mumbai real estate market.</p>
                 </div>
               </div>
             </div>
@@ -349,7 +349,7 @@ export default function HomePage({ latestBlogs = [] }) {
                 Caught your attention &amp; want to know more?
               </h2>
               <p className="mt-4 md:mt-5 text-[14.5px] md:text-base leading-relaxed text-slate-600">
-                Have a chat with one of our experienced property specialists across India.
+                Have a chat with one of our experienced property specialists across Mumbai.
               </p>
               <div className="mt-6 md:mt-8">
                 <button

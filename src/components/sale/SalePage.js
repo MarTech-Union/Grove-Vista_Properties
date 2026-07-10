@@ -114,7 +114,7 @@ export default function SalePage() {
             <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-            <span className="text-white/80">Properties for Sale in India</span>
+            <span className="text-white/80">Properties for Sale in Mumbai</span>
           </nav>
 
           <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -125,10 +125,10 @@ export default function SalePage() {
               </span>
               <h1 className="font-serif mt-3 text-[clamp(2.4rem,5vw,3.8rem)] font-semibold leading-tight text-white">
                 Properties for Sale<br />
-                <span className="text-amber-400">in India</span>
+                <span className="text-amber-400">in Mumbai</span>
               </h1>
               <p className="mt-5 max-w-lg text-lg leading-relaxed text-slate-400">
-                Discover curated residential and commercial properties across India&apos;s most sought-after cities — verified listings, transparent pricing, expert guidance.
+                Discover curated residential and commercial properties across Mumbai&apos;s most sought-after cities — verified listings, transparent pricing, expert guidance.
               </p>
 
               {/* Stat cards */}
@@ -139,7 +139,7 @@ export default function SalePage() {
               <div className="relative h-[300px] sm:h-[350px] lg:h-[440px] overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
                 <Image
                   src={heroImage}
-                  alt="Luxury property for sale in India"
+                  alt="Luxury property for sale in Mumbai"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -148,7 +148,7 @@ export default function SalePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent" />
                 <div className="absolute bottom-6 left-6">
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-amber-400">Verified Listings</p>
-                  <p className="font-serif text-xl font-semibold text-white">Premium Properties Across India</p>
+                  <p className="font-serif text-xl font-semibold text-white">Premium Properties Across Mumbai</p>
                 </div>
               </div>
              
@@ -204,7 +204,7 @@ export default function SalePage() {
           <div>
             <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-amber-600 mb-1">Live Listings</p>
             <h2 className="font-serif text-3xl font-bold text-slate-900">
-              {propertyFor === "commercial" ? "Commercial" : "Residential"} Properties for Sale in India
+              {propertyFor === "commercial" ? "Commercial" : "Residential"} Properties for Sale in Mumbai
             </h2>
             <p className="mt-1 text-sm text-slate-500">
               <span className="font-bold text-slate-900">{filteredProperties.length}</span> listings found

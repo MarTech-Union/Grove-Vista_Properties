@@ -3,7 +3,7 @@ import AboutUsPageComponent from "@/components/about/AboutUsPage";
 export const metadata = {
   title: "About Us",
   description:
-    "Learn about Grove Vista Properties, our mission, vision, values, and why clients across India trust us for high-value property advisory.",
+    "Learn about Grove Vista Properties, our mission, vision, values, and why clients across Mumbai trust us for high-value property advisory.",
   alternates: {
     canonical: "/about",
   },
