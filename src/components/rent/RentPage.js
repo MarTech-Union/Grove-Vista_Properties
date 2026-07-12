@@ -144,7 +144,7 @@ export default function RentPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent" />
                 <div className="absolute bottom-6 left-6">
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-amber-400">Available Now</p>
-                  <p className="font-serif text-xl font-semibold text-white">Premium Rentals Across Mumbai</p>
+                  <p className="font-serif text-xl font-semibold text-white">Premium Rentals Property Across Mumbai</p>
                 </div>
               </div>
              
