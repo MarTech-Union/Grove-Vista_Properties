@@ -1,10 +1,12 @@
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { Blog } from "@/models";
 
 export async function GET(request, { params }) {
   try {
     const { slug } = params;
-    const blogsCollection = await getCollection("blogs");
+    await connectDB();
+    const blogsCollection = Blog;
     const blog = await blogsCollection.findOne({ slug });
     
     if (!blog) {
@@ -28,7 +30,8 @@ export async function PUT(request, { params }) {
       delete data._id;
     }
     
-    const blogsCollection = await getCollection("blogs");
+    await connectDB();
+    const blogsCollection = Blog;
     const result = await blogsCollection.updateOne(
       { slug },
       { $set: { ...data, updatedAt: new Date() } }
@@ -48,7 +51,8 @@ export async function PUT(request, { params }) {
 export async function DELETE(request, { params }) {
   try {
     const { slug } = params;
-    const blogsCollection = await getCollection("blogs");
+    await connectDB();
+    const blogsCollection = Blog;
     const result = await blogsCollection.deleteOne({ slug });
     
     if (result.deletedCount === 0) {

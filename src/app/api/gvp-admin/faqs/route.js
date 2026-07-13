@@ -1,7 +1,8 @@
 export const runtime = "nodejs";
 
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { SiteFaq } from "@/models";
 import { randomUUID } from "crypto";
 
 export async function GET(request) {
@@ -9,12 +10,13 @@ export async function GET(request) {
     const { searchParams } = new URL(request.url);
     const category = searchParams.get("category");
 
-    const col = await getCollection("site_faqs");
+    await connectDB();
+    const col = SiteFaq;
     const query = category ? { category } : {};
     const items = await col
-      .find(query, { projection: { _id: 0 } })
+      .find(query).select('-_id')
       .sort({ order: 1, createdAt: 1 })
-      .toArray();
+      .lean();
 
     return NextResponse.json({ items }, { status: 200 });
   } catch (err) {
@@ -29,7 +31,8 @@ export async function POST(request) {
       return NextResponse.json({ message: "category, question and answer are required." }, { status: 400 });
     }
 
-    const col = await getCollection("site_faqs");
+    await connectDB();
+    const col = SiteFaq;
     const doc = {
       id: `sfaq-${randomUUID().slice(0, 8)}`,
       category,
@@ -40,7 +43,7 @@ export async function POST(request) {
       updatedAt: new Date().toISOString(),
     };
 
-    await col.insertOne(doc);
+    await col.create(doc);
     return NextResponse.json({ item: doc }, { status: 201 });
   } catch (err) {
     return NextResponse.json({ message: "Failed to create." }, { status: 500 });

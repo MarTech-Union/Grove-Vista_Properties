@@ -1,12 +1,14 @@
 export const runtime = "nodejs";
 
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { Property } from "@/models";
 
 export async function POST() {
   try {
-    const col = await getCollection("properties");
-    const all = await col.find({}, { projection: { _id: 0 } }).toArray();
+    await connectDB();
+    const col = Property;
+    const all = await col.find({}).select('-_id').lean();
 
     // Group by title (case-insensitive)
     const seen = new Map();

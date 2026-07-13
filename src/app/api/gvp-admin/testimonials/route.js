@@ -1,16 +1,18 @@
 export const runtime = "nodejs";
 
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { Testimonial } from "@/models";
 import { randomUUID } from "crypto";
 
 export async function GET() {
   try {
-    const col = await getCollection("testimonials");
+    await connectDB();
+    const col = Testimonial;
     const items = await col
-      .find({}, { projection: { _id: 0 } })
+      .find({}).select('-_id')
       .sort({ order: 1, createdAt: 1 })
-      .toArray();
+      .lean();
     return NextResponse.json({ items }, { status: 200 });
   } catch {
     return NextResponse.json({ message: "Failed to fetch." }, { status: 500 });
@@ -24,7 +26,8 @@ export async function POST(request) {
     if (!name?.trim() || !quote?.trim()) {
       return NextResponse.json({ message: "name and quote are required." }, { status: 400 });
     }
-    const col = await getCollection("testimonials");
+    await connectDB();
+    const col = Testimonial;
     const doc = {
       id: `tst-${randomUUID().slice(0, 8)}`,
       tag: tag?.trim() || "",
@@ -39,7 +42,7 @@ export async function POST(request) {
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     };
-    await col.insertOne(doc);
+    await col.create(doc);
     return NextResponse.json({ item: doc }, { status: 201 });
   } catch {
     return NextResponse.json({ message: "Failed to create." }, { status: 500 });

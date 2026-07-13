@@ -1,19 +1,21 @@
 export const runtime = "nodejs";
 
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { SiteFaq } from "@/models";
 
 export async function GET(request) {
   try {
     const { searchParams } = new URL(request.url);
     const category = searchParams.get("category");
 
-    const col = await getCollection("site_faqs");
+    await connectDB();
+    const col = SiteFaq;
     const query = category ? { category } : {};
     const items = await col
-      .find(query, { projection: { _id: 0 } })
+      .find(query).select('-_id')
       .sort({ order: 1, createdAt: 1 })
-      .toArray();
+      .lean();
 
     return NextResponse.json({ items }, { status: 200 });
   } catch (err) {

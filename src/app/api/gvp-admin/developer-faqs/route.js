@@ -1,7 +1,8 @@
 export const runtime = "nodejs";
 
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { DeveloperFaq } from "@/models";
 import { randomUUID } from "crypto";
 
 export async function GET(request) {
@@ -9,12 +10,13 @@ export async function GET(request) {
     const { searchParams } = new URL(request.url);
     const developer = searchParams.get("developer");
 
-    const col = await getCollection("developer_faqs");
+    await connectDB();
+    const col = DeveloperFaq;
     const query = developer ? { developer } : {};
     const items = await col
-      .find(query, { projection: { _id: 0 } })
+      .find(query).select('-_id')
       .sort({ order: 1, createdAt: 1 })
-      .toArray();
+      .lean();
 
     return NextResponse.json({ items }, { status: 200 });
   } catch (err) {
@@ -45,8 +47,9 @@ export async function POST(request) {
       updatedAt: new Date().toISOString(),
     };
 
-    const col = await getCollection("developer_faqs");
-    await col.insertOne(newFaq);
+    await connectDB();
+    const col = DeveloperFaq;
+    await col.create(newFaq);
 
     const { _id, ...data } = newFaq;
     return NextResponse.json({ message: "FAQ created.", data }, { status: 201 });

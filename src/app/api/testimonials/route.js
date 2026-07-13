@@ -1,15 +1,17 @@
 export const runtime = "nodejs";
 
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { Testimonial } from "@/models";
 
 export async function GET() {
   try {
-    const col = await getCollection("testimonials");
+    await connectDB();
+    const col = Testimonial;
     const items = await col
-      .find({}, { projection: { _id: 0 } })
+      .find({}).select('-_id')
       .sort({ order: 1, createdAt: 1 })
-      .toArray();
+      .lean();
     return NextResponse.json({ items }, { status: 200 });
   } catch {
     return NextResponse.json({ message: "Failed to fetch." }, { status: 500 });

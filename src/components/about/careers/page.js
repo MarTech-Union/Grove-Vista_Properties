@@ -110,25 +110,30 @@ const SelectField = ({ name, options, placeholder }) => (
 const CareerForm = ({ className = "" }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-const handleSubmit = (event) => {
+const handleSubmit = async (event) => {
   event.preventDefault();
   setIsSubmitting(true);
 
-  const formData = new FormData(event.currentTarget);
-  const fullName = formData.get("fullName") || "";
-  const nationality = formData.get("nationality") || "";
-  const inIndia = formData.get("inIndia") || "";
-  const department = formData.get("department") || "";
-  const email = formData.get("email") || "";
-  const mobile = formData.get("mobile") || "";
+  try {
+    const formData = new FormData(event.currentTarget);
+    const res = await fetch("/api/careers/apply", {
+      method: "POST",
+      body: formData,
+    });
 
-  const subject = encodeURIComponent(`Career Application – ${department} – ${fullName}`);
-  const body = encodeURIComponent(
-    `Full Name: ${fullName}\nNationality: ${nationality}\nBased in India: ${inIndia}\nDepartment: ${department}\nEmail: ${email}\nMobile: ${mobile}\n\nPlease attach your CV to this email.`
-  );
-
-  window.location.href = `mailto:careers@grovevistaproperties.com?subject=${subject}&body=${body}`;
-  setIsSubmitting(false);
+    const data = await res.json();
+    if (!res.ok) {
+      alert(data.message || "Failed to submit application.");
+    } else {
+      alert("Application submitted successfully!");
+      event.target.reset();
+    }
+  } catch (error) {
+    console.error("Error submitting application:", error);
+    alert("An error occurred while submitting your application.");
+  } finally {
+    setIsSubmitting(false);
+  }
 };
 
   return (
@@ -137,9 +142,9 @@ const handleSubmit = (event) => {
         <InputField type="text" placeholder="Full Name" name="fullName" />
         <InputField type="text" placeholder="Nationality" name="nationality" />
         <SelectField
-          name="inIndia"
+          name="inMumbai"
           options={["Yes", "No"]}
-          placeholder="Are you currently based in India?"
+          placeholder="Are you currently based in Mumbai?"
         />
         <SelectField
           name="department"

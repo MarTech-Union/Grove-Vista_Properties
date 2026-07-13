@@ -1,19 +1,21 @@
 export const runtime = "nodejs";
 
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { DeveloperFaq } from "@/models";
 
 export async function GET(request) {
   try {
     const { searchParams } = new URL(request.url);
     const developer = searchParams.get("developer");
 
-    const col = await getCollection("developer_faqs");
+    await connectDB();
+    const col = DeveloperFaq;
     const query = developer ? { developer } : {};
     const items = await col
-      .find(query, { projection: { _id: 0 } })
+      .find(query).select('-_id')
       .sort({ order: 1, createdAt: 1 })
-      .toArray();
+      .lean();
 
     return NextResponse.json({ items }, { status: 200 });
   } catch (err) {

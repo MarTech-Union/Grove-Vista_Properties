@@ -1,12 +1,14 @@
 export const runtime = "nodejs";
 
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { DeveloperFaq } from "@/models";
 
 export async function POST() {
   try {
-    const col = await getCollection("developer_faqs");
-    const all = await col.find({}, { projection: { _id: 0 } }).toArray();
+    await connectDB();
+    const col = DeveloperFaq;
+    const all = await col.find({}).select('-_id').lean();
 
     const seen = new Set();
     const toDelete = [];

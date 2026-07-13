@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { Application } from "@/models";
 import { randomUUID } from "crypto";
 
 export const runtime = "nodejs";
@@ -59,8 +60,9 @@ export async function POST(request) {
     const submittedAt = new Date().toISOString();
     const application = { id, fullName, email, mobile, department, nationality, inMumbai, cvFileName: cvFile.name, submittedAt };
 
-    const col = await getCollection("applications");
-    await col.insertOne(application);
+    await connectDB();
+    const col = Application;
+    await col.create(application);
 
     return NextResponse.json(
       { message: "Application submitted successfully.", data: { applicationId: id, fullName, email, mobile, department, inMumbai, cvFileName: cvFile.name, submittedAt } },

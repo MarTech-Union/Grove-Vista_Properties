@@ -1,14 +1,16 @@
 export const runtime = "nodejs";
 
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { SiteFaq } from "@/models";
 
 export async function PUT(request, { params }) {
   try {
     const { id } = await params;
     const { question, answer, order } = await request.json();
 
-    const col = await getCollection("site_faqs");
+    await connectDB();
+    const col = SiteFaq;
     await col.updateOne(
       { id },
       { $set: { question: question?.trim(), answer: answer?.trim(), order: order ? parseInt(order) : 0, updatedAt: new Date().toISOString() } }
@@ -22,7 +24,8 @@ export async function PUT(request, { params }) {
 export async function DELETE(request, { params }) {
   try {
     const { id } = await params;
-    const col = await getCollection("site_faqs");
+    await connectDB();
+    const col = SiteFaq;
     await col.deleteOne({ id });
     return NextResponse.json({ message: "Deleted." }, { status: 200 });
   } catch (err) {

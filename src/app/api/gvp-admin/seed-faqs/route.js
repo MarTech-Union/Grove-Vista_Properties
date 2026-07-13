@@ -1,7 +1,8 @@
 export const runtime = "nodejs";
 
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { DeveloperFaq } from "@/models";
 import { randomUUID } from "crypto";
 
 const SAMPLE_FAQS = [
@@ -235,7 +236,8 @@ const SAMPLE_FAQS = [
 
 export async function POST() {
   try {
-    const col = await getCollection("developer_faqs");
+    await connectDB();
+    const col = DeveloperFaq;
 
     const docs = SAMPLE_FAQS.map((f) => ({
       ...f,

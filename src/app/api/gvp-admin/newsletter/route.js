@@ -1,18 +1,20 @@
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { Newsletter } from "@/models";
 
 export async function GET(request) {
   try {
     const { searchParams } = new URL(request.url);
     const limit = Math.min(100, parseInt(searchParams.get("limit") || "50", 10));
 
-    const col = await getCollection("newsletter");
+    await connectDB();
+    const col = Newsletter;
     const total = await col.countDocuments();
     const items = await col
-      .find({}, { projection: { _id: 0 } })
+      .find({}).select('-_id')
       .sort({ subscribedAt: -1 })
       .limit(limit)
-      .toArray();
+      .lean();
 
     return NextResponse.json({ items, total }, { status: 200 });
   } catch (err) {
@@ -27,7 +29,8 @@ export async function DELETE(request) {
     if (!Array.isArray(ids) || ids.length === 0) {
       return NextResponse.json({ message: "No IDs provided." }, { status: 400 });
     }
-    const col = await getCollection("newsletter");
+    await connectDB();
+    const col = Newsletter;
     const result = await col.deleteMany({ id: { $in: ids } });
     return NextResponse.json({ message: `Deleted ${result.deletedCount} subscriber(s).` }, { status: 200 });
   } catch (err) {

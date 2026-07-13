@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { Booking } from "@/models";
 import { randomUUID } from "crypto";
 
 export const runtime = "nodejs";
@@ -66,8 +67,9 @@ export async function POST(request) {
       submittedAt 
     };
 
-    const col = await getCollection("bookings");
-    await col.insertOne(booking);
+    await connectDB();
+    const col = Booking;
+    await col.create(booking);
 
     return NextResponse.json({ message: "Booking confirmed successfully.", data: booking }, { status: 200 });
   } catch (err) {

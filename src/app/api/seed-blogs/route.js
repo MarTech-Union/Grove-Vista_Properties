@@ -1,10 +1,12 @@
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { Blog } from "@/models";
 import { blogs } from "@/data/blogs";
 
 export async function GET() {
   try {
-    const blogsCollection = await getCollection("blogs");
+    await connectDB();
+    const blogsCollection = Blog;
     
     // Clear existing
     await blogsCollection.deleteMany({});

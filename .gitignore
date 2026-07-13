@@ -44,3 +44,5 @@ next-env.d.ts
 # AI agent instructions (dev-only, not for public repo)
 CLAUDE.md
 AGENTS.md
+
+.code-review-graph

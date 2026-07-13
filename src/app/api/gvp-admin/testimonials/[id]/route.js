@@ -1,7 +1,8 @@
 export const runtime = "nodejs";
 
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { Testimonial } from "@/models";
 
 export async function PUT(request, { params }) {
   try {
@@ -11,7 +12,8 @@ export async function PUT(request, { params }) {
     if (!name?.trim() || !quote?.trim()) {
       return NextResponse.json({ message: "name and quote are required." }, { status: 400 });
     }
-    const col = await getCollection("testimonials");
+    await connectDB();
+    const col = Testimonial;
     const update = {
       tag: tag?.trim() || "",
       title: title?.trim() || "",
@@ -37,7 +39,8 @@ export async function PUT(request, { params }) {
 export async function DELETE(request, { params }) {
   try {
     const { id } = await params;
-    const col = await getCollection("testimonials");
+    await connectDB();
+    const col = Testimonial;
     const result = await col.deleteOne({ id });
     if (result.deletedCount === 0) {
       return NextResponse.json({ message: "Not found." }, { status: 404 });

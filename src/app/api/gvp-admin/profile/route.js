@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { AdminProfile } from "@/models";
 import { cookies } from "next/headers";
 import { ADMIN_SESSION_COOKIE, verifySessionToken } from "@/lib/adminAuth";
 
@@ -13,7 +14,8 @@ export async function GET() {
       return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
     }
 
-    const collection = await getCollection("admin_profiles");
+    await connectDB();
+    const collection = AdminProfile;
     const profile = await collection.findOne({ userId: payload.userId });
 
     return NextResponse.json(profile || {
@@ -41,7 +43,8 @@ export async function POST(request) {
     const body = await request.json();
     const { name, email, avatarUrl } = body;
 
-    const collection = await getCollection("admin_profiles");
+    await connectDB();
+    const collection = AdminProfile;
     
     await collection.updateOne(
       { userId: payload.userId },

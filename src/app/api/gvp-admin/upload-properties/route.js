@@ -1,7 +1,8 @@
 export const runtime = "nodejs";
 
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { Property } from "@/models";
 import { randomUUID } from "crypto";
 import * as XLSX from "xlsx";
 
@@ -121,7 +122,8 @@ export async function POST(request) {
       );
     }
 
-    const col = await getCollection("properties");
+    await connectDB();
+    const col = Property;
     await col.insertMany(docs);
 
     return NextResponse.json(

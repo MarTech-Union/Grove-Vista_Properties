@@ -1,13 +1,15 @@
 export const runtime = "nodejs";
 
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { Property } from "@/models";
 import { randomUUID } from "crypto";
 
 export async function GET() {
   try {
-    const col = await getCollection("properties");
-    const items = await col.find({}, { projection: { _id: 0 } }).toArray();
+    await connectDB();
+    const col = Property;
+    const items = await col.find({}).select('-_id').lean();
     return NextResponse.json({ items, total: items.length }, { status: 200 });
   } catch (err) {
     console.error("[admin/properties GET]", err);
@@ -46,8 +48,9 @@ export async function POST(request) {
       updatedAt: new Date().toISOString(),
     };
 
-    const col = await getCollection("properties");
-    await col.insertOne(newProperty);
+    await connectDB();
+    const col = Property;
+    await col.create(newProperty);
 
     // Return without _id
     const { _id, ...data } = newProperty;

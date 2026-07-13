@@ -1,7 +1,8 @@
 export const runtime = "nodejs";
 
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { DeveloperFaq } from "@/models";
 
 export async function PUT(request, { params }) {
   try {
@@ -16,7 +17,8 @@ export async function PUT(request, { params }) {
       );
     }
 
-    const col = await getCollection("developer_faqs");
+    await connectDB();
+    const col = DeveloperFaq;
     const result = await col.updateOne(
       { id },
       {
@@ -43,7 +45,8 @@ export async function PUT(request, { params }) {
 export async function DELETE(request, { params }) {
   try {
     const { id } = params;
-    const col = await getCollection("developer_faqs");
+    await connectDB();
+    const col = DeveloperFaq;
     const result = await col.deleteOne({ id });
 
     if (result.deletedCount === 0) {

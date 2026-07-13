@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { Newsletter } from "@/models";
 import { randomUUID } from "crypto";
 
 export const runtime = "nodejs";
@@ -27,7 +28,8 @@ export async function POST(request) {
   }
 
   try {
-    const col = await getCollection("newsletter");
+    await connectDB();
+    const col = Newsletter;
     const exists = await col.findOne({ email }, { projection: { _id: 0 } });
     if (exists) {
       return NextResponse.json({ message: "You are already subscribed." }, { status: 409 });
@@ -39,7 +41,7 @@ export async function POST(request) {
       email,
       subscribedAt: new Date().toISOString(),
     };
-    await col.insertOne(subscriber);
+    await col.create(subscriber);
 
     return NextResponse.json({ message: "Subscribed successfully.", data: subscriber }, { status: 200 });
   } catch (err) {

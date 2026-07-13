@@ -1,10 +1,12 @@
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { Booking } from "@/models";
 
 export async function DELETE(request, { params }) {
   try {
     const { id } = await params;
-    const col = await getCollection("bookings");
+    await connectDB();
+    const col = Booking;
     const result = await col.deleteOne({ id });
     if (result.deletedCount === 0) {
       return NextResponse.json({ message: "Booking not found." }, { status: 404 });

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { Booking } from "@/models";
 import { randomUUID } from "crypto";
 
 export const runtime = "nodejs";
@@ -42,8 +43,9 @@ export async function POST(request) {
     const submittedAt = new Date().toISOString();
     const booking = { id, fullName, email, countryCode, mobile, source, submittedAt };
 
-    const col = await getCollection("bookings");
-    await col.insertOne(booking);
+    await connectDB();
+    const col = Booking;
+    await col.create(booking);
 
     return NextResponse.json({ message: "Call request submitted successfully.", data: booking }, { status: 200 });
   } catch (err) {

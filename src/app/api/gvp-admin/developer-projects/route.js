@@ -1,19 +1,21 @@
 export const runtime = "nodejs";
 
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { DeveloperProject } from "@/models";
 import { randomUUID } from "crypto";
 
 export async function GET(request) {
   try {
     const { searchParams } = new URL(request.url);
     const developer = searchParams.get("developer");
-    const col = await getCollection("developer_projects");
+    await connectDB();
+    const col = DeveloperProject;
     const query = developer ? { developer } : {};
     const items = await col
-      .find(query, { projection: { _id: 0 } })
+      .find(query).select('-_id')
       .sort({ featured: -1, order: 1, createdAt: 1 })
-      .toArray();
+      .lean();
     return NextResponse.json({ items }, { status: 200 });
   } catch {
     return NextResponse.json({ message: "Failed to fetch." }, { status: 500 });
@@ -27,7 +29,8 @@ export async function POST(request) {
     if (!name?.trim() || !developer?.trim()) {
       return NextResponse.json({ message: "name and developer are required." }, { status: 400 });
     }
-    const col = await getCollection("developer_projects");
+    await connectDB();
+    const col = DeveloperProject;
     const doc = {
       id: `proj-${randomUUID().slice(0, 8)}`,
       name: name.trim(),
@@ -43,7 +46,7 @@ export async function POST(request) {
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     };
-    await col.insertOne(doc);
+    await col.create(doc);
     return NextResponse.json({ item: doc }, { status: 201 });
   } catch {
     return NextResponse.json({ message: "Failed to create." }, { status: 500 });

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { Booking } from "@/models";
 import { randomUUID } from "crypto";
 
 export const runtime = "nodejs";
@@ -57,8 +58,9 @@ export async function POST(request) {
       submittedAt 
     };
 
-    const col = await getCollection("bookings");
-    await col.insertOne(submission);
+    await connectDB();
+    const col = Booking;
+    await col.create(submission);
 
     return NextResponse.json(
       { message: "Your details were submitted successfully.", data: { inquiryId: id, firstName, lastName, email, phone, submittedAt } },

@@ -1,7 +1,8 @@
 export const runtime = "nodejs";
 
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { Property } from "@/models";
 import { randomUUID } from "crypto";
 
 function makeId() {
@@ -430,7 +431,8 @@ const SEED_PROPERTIES = [
 
 export async function POST() {
   try {
-    const col = await getCollection("properties");
+    await connectDB();
+    const col = Property;
 
     const docs = SEED_PROPERTIES.map((p) => ({
       id: makeId(),

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { Property } from "@/models";
 
 export const runtime = "nodejs";
 
@@ -15,13 +16,14 @@ export async function GET(request) {
     if (category) query.category = { $regex: new RegExp(`^${category}$`, "i") };
     if (propertyFor) query.propertyFor = { $regex: new RegExp(`^${propertyFor}$`, "i") };
 
-    const col = await getCollection("properties");
+    await connectDB();
+    const col = Property;
     const total = await col.countDocuments(query);
     const properties = await col
-      .find(query, { projection: { _id: 0 } })
+      .find(query).select('-_id')
       .skip((page - 1) * limit)
       .limit(limit)
-      .toArray();
+      .lean();
 
     return NextResponse.json({ properties, total, page, limit, hasMore: page * limit < total }, { status: 200 });
   } catch (err) {

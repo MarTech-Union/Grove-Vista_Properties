@@ -1,7 +1,8 @@
 export const runtime = "nodejs";
 
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { DeveloperProject } from "@/models";
 
 export async function PUT(request, { params }) {
   try {
@@ -11,7 +12,8 @@ export async function PUT(request, { params }) {
     if (!name?.trim() || !developer?.trim()) {
       return NextResponse.json({ message: "name and developer are required." }, { status: 400 });
     }
-    const col = await getCollection("developer_projects");
+    await connectDB();
+    const col = DeveloperProject;
     const update = {
       name: name.trim(),
       developer: developer.trim(),
@@ -38,7 +40,8 @@ export async function PUT(request, { params }) {
 export async function DELETE(request, { params }) {
   try {
     const { id } = params;
-    const col = await getCollection("developer_projects");
+    await connectDB();
+    const col = DeveloperProject;
     const result = await col.deleteOne({ id });
     if (result.deletedCount === 0) {
       return NextResponse.json({ message: "Not found." }, { status: 404 });

@@ -1,12 +1,14 @@
 export const runtime = "nodejs";
 
 import { NextResponse } from "next/server";
-import { getCollection } from "@/lib/mongodb";
+import connectDB from "@/lib/mongoose";
+import { Property } from "@/models";
 
 export async function GET(request, { params }) {
   try {
     const { id } = await params;
-    const col = await getCollection("properties");
+    await connectDB();
+    const col = Property;
     const property = await col.findOne({ id }, { projection: { _id: 0 } });
     if (!property) {
       return NextResponse.json({ message: "Property not found." }, { status: 404 });
@@ -43,7 +45,8 @@ export async function PUT(request, { params }) {
       updatedAt: new Date().toISOString(),
     };
 
-    const col = await getCollection("properties");
+    await connectDB();
+    const col = Property;
     const result = await col.findOneAndUpdate(
       { id },
       { $set: update },
@@ -64,7 +67,8 @@ export async function PUT(request, { params }) {
 export async function DELETE(request, { params }) {
   try {
     const { id } = await params;
-    const col = await getCollection("properties");
+    await connectDB();
+    const col = Property;
     const result = await col.deleteOne({ id });
     if (result.deletedCount === 0) {
       return NextResponse.json({ message: "Property not found." }, { status: 404 });
